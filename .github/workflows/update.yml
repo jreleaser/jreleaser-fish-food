@@ -1,0 +1,45 @@
+name: Update
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+          
+      - name: Checkout fish-food fork
+        uses: actions/checkout@v2
+        with:
+          repository: aalmiray/fish-food
+          path: fish-food
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Refresh fork
+        run: |
+          cd ${GITHUB_WORKSPACE}/fish-food
+          git remote add upstream https://github.com/fishworks/fish-food.git
+          git pull upstream master
+
+      - name: Grab the tag
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        
+      - name: Branch update
+        run: |
+          BRANCH=jreleaser-${{ steps.vars.outputs.tag }}
+          cd ${GITHUB_WORKSPACE}/fish-food
+          git checkout -b $BRANCH
+          cp ${GITHUB_WORKSPACE}/main/Food/jreleaser.lua Food/jreleaser.lua
+          git config --global user.email "${{ secrets.AUTHOR_EMAIL }}"
+          git config --global user.name "${{ secrets.AUTHOR_NAME }}"
+          git commit -a -m "jreleaser: update to version ${{ steps.vars.outputs.tag }}"
+          git push origin $BRANCH
