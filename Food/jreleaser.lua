@@ -21,6 +21,19 @@ food = {
             }
         },
         {
+            os = "darwin",
+            arch = "arm64",
+            url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-osx-aarch64.zip",
+            sha256 = "648f6d2002957621470884aea583b0e9ec0202772eec96a1e1f2ffc7d800bad7",
+            resources = {
+                {
+                    path = name .. "-standalone-" .. version .. "-osx-aarch64/bin/" .. name,
+                    installpath = "bin/" .. name,
+                    executable = true
+                }
+            }
+        },
+        {
             os = "linux",
             arch = "amd64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-linux-x86_64.zip",
@@ -28,6 +41,19 @@ food = {
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-linux-x86_64/bin/" .. name,
+                    installpath = "bin/" .. name,
+                    executable = true
+                }
+            }
+        },
+        {
+            os = "linux",
+            arch = "arm64",
+            url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-linux-aarch64.zip",
+            sha256 = "2715998639461e24b5205e045ea1bc885c26d7507ef39d3ffbc9c8747f0b3487",
+            resources = {
+                {
+                    path = name .. "-standalone-" .. version .. "-linux-aarch64/bin/" .. name,
                     installpath = "bin/" .. name,
                     executable = true
                 }
@@ -44,6 +70,18 @@ food = {
                     installpath = "bin\\" .. name .. ".bat"
                 }
             }
-        }
+        },
+        {
+            os = "windows",
+            arch = "arm64",
+            url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-windows-aarch64.zip",
+            sha256 = "b42f5ec789250ea2431b5ce47aa84449d992b560d4f238f049e0d6f6e820ed1c",
+            resources = {
+                {
+                    path = name .. "-standalone-" .. version .. "-windows-aarch64\\bin\\" .. name .. ".bat",
+                    installpath = "bin\\" .. name .. ".bat"
+                }
+            }
+        },
     }
 }
