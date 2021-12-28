@@ -27,7 +27,7 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/fish-food
           git remote add upstream https://github.com/fishworks/fish-food.git
-          git pull upstream master
+          git pull upstream main
 
       - name: Grab the tag
         id: vars
