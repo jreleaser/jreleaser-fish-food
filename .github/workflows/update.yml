@@ -35,11 +35,11 @@ jobs:
         
       - name: Branch update
         run: |
+          git config --global user.email "${{ secrets.AUTHOR_EMAIL }}"
+          git config --global user.name "${{ secrets.AUTHOR_NAME }}"
           BRANCH=jreleaser-${{ steps.vars.outputs.tag }}
           cd ${GITHUB_WORKSPACE}/fish-food
           git checkout -b $BRANCH
           cp ${GITHUB_WORKSPACE}/main/Food/jreleaser.lua Food/jreleaser.lua
-          git config --global user.email "${{ secrets.AUTHOR_EMAIL }}"
-          git config --global user.name "${{ secrets.AUTHOR_NAME }}"
           git commit -a -m "jreleaser: update to version ${{ steps.vars.outputs.tag }}"
           git push origin $BRANCH
