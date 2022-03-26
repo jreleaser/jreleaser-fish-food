@@ -1,7 +1,7 @@
--- Generated with JReleaser 1.0.0-SNAPSHOT at 2022-03-05T15:54:17.031894Z
+-- Generated with JReleaser 1.0.0-SNAPSHOT at 2022-03-26T09:55:36.29189Z
 
 local name = "jreleaser"
-local version = "1.0.0-M3"
+local version = "1.0.0-RC1"
 
 food = {
     name = name,
@@ -14,7 +14,7 @@ food = {
             os = "linux",
             arch = "arm64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-linux-aarch64.zip",
-            sha256 = "3c8470b0d895f9e414fb5bbe4706a92f70e2d790f11f37d88ffb599fbe82cfbc",
+            sha256 = "49068463c9b875a35fdbc975aae890043d115a8bca32abb45c6fa1b378603e6a",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-linux-aarch64/bin/" .. name,
@@ -27,7 +27,7 @@ food = {
             os = "linux",
             arch = "amd64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-linux-x86_64.zip",
-            sha256 = "cf0ab41e0a206ce78f00f0e5116537eca826cf411ca1826209aeab7a0754cecc",
+            sha256 = "523e52b6a4523cd98d65f52ec7641432b042aa7b91985a8616eb8d14c4b096db",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-linux-x86_64/bin/" .. name,
@@ -40,7 +40,7 @@ food = {
             os = "darwin",
             arch = "arm64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-osx-aarch64.zip",
-            sha256 = "601025ac28ad8bb95fb4661420c58c501bcb468d37f65cca8118d92f64b8373e",
+            sha256 = "c6542188ed1ee1068e7f3704a502db025fc426c6e6dfdd355f8a9a7b12dff3c8",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-osx-aarch64/bin/" .. name,
@@ -53,7 +53,7 @@ food = {
             os = "darwin",
             arch = "amd64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-osx-x86_64.zip",
-            sha256 = "cc520b9d3d5e5762702c26c72370e7d8b8bbcf88a0419f45699e69e90892639c",
+            sha256 = "f8665cf0c5b98185b589434e43f1707eece73f8b84b12e8a118820ed3dca5ea7",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-osx-x86_64/bin/" .. name,
@@ -66,7 +66,7 @@ food = {
             os = "windows",
             arch = "arm64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-windows-aarch64.zip",
-            sha256 = "aa6ca846cab8fcef8631e3b8f2b50266bb8dc995c61adec72221a23aa3bd9408",
+            sha256 = "358aabb14e31d589bc6a19f21f44917d8a67baa90d355e75980bfb52e75f5a30",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-windows-aarch64\\bin\\" .. name .. ".bat",
@@ -79,7 +79,7 @@ food = {
             os = "windows",
             arch = "amd64",
             url = "https://github.com/" .. name .. "/" .. name .. "/releases/download/v" .. version .. "/" .. name .. "-standalone-" .. version .. "-windows-x86_64.zip",
-            sha256 = "69243246865e04f035a266bb0e4587400810294757fac73ce32fac975f2a8fd3",
+            sha256 = "eb2cf3254fb84824ddff2289734d3eff8424aa2838454c3022147d601f404536",
             resources = {
                 {
                     path = name .. "-standalone-" .. version .. "-windows-x86_64\\bin\\" .. name .. ".bat",
